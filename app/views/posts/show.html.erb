@@ -1,23 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<p>
-  <strong>Content:</strong>
+  <div class="posttitle">
   <%= @post.title %>
-  
+  </div>
 </p>
+
+
 <p>
-  <strong>Content:</strong>
+  <div class="postcontent">
   <%= @post.content %>
+  </div>
 </p>
 
 
-<p>住所</p>
-<p><%= @post.address %></p>
+<p>
+  <div class="postmap">
+  <%= @post.address %>
+  </div>
+</p>
+
 
 <div id="map"></div>
 
@@ -49,19 +51,6 @@
     }
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA0xGHUYRx_zR0ayXg_etDQeGqvta6pWYU&callback=initMap">
 </script>
-
-
-
-
-
-
-
-
-
-                            
-
-
-
-
+ 

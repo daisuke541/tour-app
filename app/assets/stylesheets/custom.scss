@@ -154,22 +154,16 @@ textarea {
   animation-delay  : 8s;
 }
 
-.box .src5  {
-  background-size: cover;
-  background: url(image5.jpeg) no-repeat center center;
-  animation-delay  : 10s;
-}
-
 .box .src6  {
   background-size: cover;
   background: url(image6.jpeg) no-repeat center center;
-  animation-delay  : 12s;
+  animation-delay  : 10s;
 }
 
 .box .src7  {
   background-size: cover;
   background: url(image7.jpeg) no-repeat center center;
-  animation-delay  : 14s;
+  animation-delay  : 12s;
 }
 
 @keyframes bgAnime {
@@ -228,6 +222,7 @@ p {
 
 .logo {
   float: left;
+  padding-bottom: 45px;
   font-size: 50px;
   font-family: 'Sawarabi Mincho';
   a:visited { color:white; text-decoration:none }
@@ -243,6 +238,7 @@ p {
 
 .logogradation {
   float: left;
+  padding-bottom: 45px;
   font-size: 50px;
   font-family: 'Sawarabi Mincho';
   text-transform: uppercase;
@@ -490,6 +486,25 @@ span.picture {
   line-height   : 1em;       
   transition    : .3s;       
 }
+
+.posttitle {
+  padding: 100px 50px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.postcontent {
+  padding: 30px 50px;
+  font-size: 35px;
+  line-height: 1.5em;
+  background-color: rgba(0,0,0,0,0.05);
+}
+
+.postmap {
+  padding: 50px 50px;
+  font-size: 25px;
+}
+
 /* likes */
 
 .glyphicon-heart {
