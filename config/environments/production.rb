@@ -83,9 +83,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-<<<<<<< HEAD
   config.action_mailer.default_url_options = { host: 'tourapp.ga'}
-=======
   
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
@@ -100,5 +98,4 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
->>>>>>> 1d7dc6c5bc84261719a5dde94256c91909ae17c9
 end
