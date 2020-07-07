@@ -22,6 +22,8 @@ gem 'mysql2', '0.3.20'
 # gem 'fog-aws'
 gem 'fog'
 gem 'aws-ses'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri

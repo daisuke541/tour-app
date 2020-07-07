@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 1d7dc6c5bc84261719a5dde94256c91909ae17c9
 <p>はじめまして <%= @user.name %>,</p>
 
 <p>
 日本カルト案内へようこそ！リンクをクリックしてアカウントを有効化してください。
 </p>
 
-<<<<<<< HEAD
+
 <%= link_to "アカウント有効化", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
-=======
-<%= link_to "アカウントの有効化", edit_account_activation_url(@user.activation_token,
-                                                    email: @user.email) %>
->>>>>>> 1d7dc6c5bc84261719a5dde94256c91909ae17c9
+
