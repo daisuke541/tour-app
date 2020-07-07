@@ -18,7 +18,7 @@
   <h3>投稿 (<%= @user.posts.count %>)</h3>
   
   <!-- 投稿検索機能-->
-  <p>content search</p>
+  <p>投稿を検索する</p>
   <%= form_tag user_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>

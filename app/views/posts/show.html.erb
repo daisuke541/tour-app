@@ -14,6 +14,11 @@
 </p>
 
 <p>
+<%= image_tag @post.picture.url if @post.picture? %>
+</p>
+
+
+<p>
   <div class="postmap">
   <%= @post.address %>
   </div>
@@ -49,5 +54,5 @@
     }
 </script>
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0xGHUYRx_zR0ayXg_etDQeGqvta6pWYU&callback=initMap">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_APP_KEY'] %>&callback=initMap">
 </script>
