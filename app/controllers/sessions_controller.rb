@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.guest
     log_in user
     redirect_to root_url
-    flash[:notice] = "ゲストユーザーとしてログインしました。よろしくお願い致します。"
+    flash.now[:notice] = "ゲストユーザーとしてログインしました。よろしくお願い致します。"
   end
   
   def create
@@ -18,13 +18,13 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         redirect_back_or user
       else
-        message  = "Account not activated. "
-        message += "Check your email for the activation link."
+        message  = "有効なアカウントではありません"
+        message += "メールのリンクを確認してください"
         flash[:warning] = message
         redirect_to root_url
       end
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = "メールアドレスとパスワードの組み合わせを確認してください"
       render 'new'
     end
   end
