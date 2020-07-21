@@ -1,24 +1,28 @@
-# README
+日本にあるB級スポットやカルトな観光地を共有したり、記事を検索できるサイトです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+【Github】
+https://github.com/daisuke541/tourapp
 
-Things you may want to cover:
+【言語・使用技術】
+・インフラ
+AWS(EC2/Route53/VPC/SES/S3)
+unicorn
+nginx
 
-* Ruby version
+・バックエンド
+Ruby 2.5.1
+Rails 6.0.2.1
 
-* System dependencies
+・フロントエンド
+HTML.CSS
+Bootstrap
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+【機能一覧】
+・ユーザー登録・編集・削除
+・ログイン、ログアウト
+・SESによるメール認証
+・ゲストユーザーログイン
+・ユーザー同士のフォロー・フォロー解除
+・記事投稿・削除
+・記事検索
+・写真投稿機能（AWSS3使用）
