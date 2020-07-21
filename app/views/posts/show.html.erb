@@ -54,4 +54,7 @@ src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV["GOOGLEMAP_API_
       infowindow.open(map, marker);
     });
   }
+window.onload = function () {
+    initMap();
+}
 </script>
