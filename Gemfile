@@ -22,14 +22,13 @@ gem 'mysql2', '0.3.20'
 # gem 'fog-aws'
 gem 'fog'
 gem 'aws-ses'
-gem 'geocoder'
-gem 'gmaps4rails'
 gem "activejob", "5.1.4"
 gem "actionview", "5.1.4"
 gem "actionpack", "5.1.4"
 gem "activesupport", "5.1.4"
 gem "websocket-extensions", ">= 0.1.5"
 gem "rack", ">= 2.2.3"
+gem 'sqlite3', '~> 1.3.6'
 
 
 group :development, :test do

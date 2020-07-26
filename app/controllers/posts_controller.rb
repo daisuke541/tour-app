@@ -5,8 +5,8 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
-    @latitude = @post.latitude
-    @longitude = @post.longitude
+    # @latitude = @post.latitude
+    # @longitude = @post.longitude
     @address = @post.address
   end 
   
