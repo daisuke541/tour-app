@@ -26,12 +26,10 @@
 
 <div id="map"></div>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV["GOOGLEMAP_API_KEY"] %>&callback=initMap">
-</script>
+
 <script type="text/javascript">
   function initMap() {
-    var test = { lat: <%= @latitude %>, lng: <%= @longitude %> };
+    var test = { lat: <%= @post.latitude %>, lng: <%= @post.longitude %> };
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
       center: test
@@ -54,7 +52,7 @@ src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV["GOOGLEMAP_API_
       infowindow.open(map, marker);
     });
   }
-window.onload = function () {
-    initMap();
-}
 </script>
+<script src=”https://maps.googleapis.com/maps/api/js?key=AIzaSyA0xGHUYRx_zR0ayXg_etDQeGqvta6pWYU">
+</script>
+<script>initMap();</script>
