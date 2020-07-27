@@ -1,4 +1,21 @@
 <% if @feed_items.any? %>
+
+  <ul class="bxslider">
+    <% @posts.each do |post| %>
+      <li>
+        <%= link_to post_path(post) do %>
+          <% if post.image? %>
+            <%= image_tag post.image.to_s %>
+          <% else %>
+            <%= image_tag 'no_image.png' %>
+          <% end %>
+          <h4><%= post.title %>
+          </h4>
+        <% end %>
+        </li>
+      <% end %>
+  </ul>
+
   <ol class="posts">
     <%= render @feed_items %>
   </ol>

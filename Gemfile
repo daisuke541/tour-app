@@ -29,7 +29,7 @@ gem "activesupport", "5.1.4"
 gem "websocket-extensions", ">= 0.1.5"
 gem "rack", ">= 2.2.3"
 gem 'sqlite3', '~> 1.3.6'
-
+gem 'bxslider-rails', '~> 4.2.5.1'
 
 group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri
