@@ -1,5 +1,7 @@
 「日本SECRET案内」
 
+<img width="1428" alt="日本Secret案内" src="https://user-images.githubusercontent.com/54613916/88804206-8a3b9580-d1e8-11ea-94b4-77ad4889d561.png">
+
 日本にあるB級スポットや珍しい観光地を共有したり、記事を検索できるサイトです。
 
 【Github】
