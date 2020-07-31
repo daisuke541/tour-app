@@ -24,20 +24,32 @@
   </div>
 </p>
 
-<div id="map"></div>
+<p>
+  <strong>Latitude:</strong>
+  <%= @post.latitude %>
+  <%= @latitude %>
+</p>
 
+<p>
+  <strong>Longitude:</strong>
+  <%= @post.longitude %>
+</p>
+
+
+<div id="map" style="height: 500px;"></div>
 
 <script type="text/javascript">
   function initMap() {
-    var test = { lat: <%= @post.latitude %>, lng: <%= @post.longitude %> };
+
+    var test = {lat: 35.685175, lng: 139.752799};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
-      center: test
+      center: new google.maps.LatLng(35.685175,139.752799)
     });
     var transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
 
-    var contentString = "住所：<%= @post.address %>";
+    var contentString = '住所：<%= @post.address %>';
     var infowindow = new google.maps.InfoWindow({
       content: contentString
     });
@@ -47,12 +59,14 @@
       map: map,
       title: contentString
     });
-    console.log(marker)
+
     marker.addListener('click', function() {
       infowindow.open(map, marker);
     });
   }
 </script>
-<script src=”https://maps.googleapis.com/maps/api/js?key=AIzaSyA0xGHUYRx_zR0ayXg_etDQeGqvta6pWYU">
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV["GOOGLEMAP_API_KEY"] %>">
 </script>
 <script>initMap();</script>
