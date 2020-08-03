@@ -22,10 +22,10 @@ gem 'mysql2', '0.3.20'
 # gem 'fog-aws'
 gem 'fog'
 gem 'aws-ses'
-gem "activejob", "5.1.4"
-gem "actionview", "5.1.4"
-gem "actionpack", "5.1.4"
-gem "activesupport", "5.1.4"
+gem "activejob"
+gem "actionview"
+gem "actionpack"
+gem "activesupport"
 gem "websocket-extensions", ">= 0.1.5"
 gem "rack", ">= 2.2.3"
 gem 'sqlite3', '~> 1.3.6'
