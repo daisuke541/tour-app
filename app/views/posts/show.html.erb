@@ -36,7 +36,9 @@
 </p>
 
 
-<div id="map" style="height: 500px;"></div>
+<script>initMap();</script>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAP_API_KEY"] %>"></script>
 
 <script type="text/javascript">
   function initMap() {
@@ -66,7 +68,4 @@
   }
 </script>
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV["GOOGLEMAP_API_KEY"] %>">
-</script>
-<script>initMap();</script>
+
