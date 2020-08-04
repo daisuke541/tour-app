@@ -35,6 +35,9 @@ gem 'webdrivers'
 
 group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -46,7 +49,6 @@ end
 
 group :test do
   gem 'rails-controller-testing', '1.0.2'
-  gem 'rspec-rails', '~> 3.8'
   gem 'minitest-reporters',       '1.1.14'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
