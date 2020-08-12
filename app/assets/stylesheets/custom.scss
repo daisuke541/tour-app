@@ -49,9 +49,9 @@ $gray-medium-light: #eaeaea;
 
 
 .titlelogogradation {
-  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
-  -webkit-background-clip: text;//テキストでくり抜く
-  -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   a:visited { color:#ACB6E5; text-decoration:none }
 }
 
@@ -120,7 +120,7 @@ textarea {
   overflow   : hidden;
 }
 
-/* --- 背景の指定 ------------------------------------------- */
+/*  背景指定  */
 .box .bgImg {
   position   : absolute;
   top        : 0;
@@ -128,10 +128,10 @@ textarea {
   bottom     : 0;
   right      : 0;
   opacity    : 0;
-  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+  animation  : bgAnime 20s infinite;   
 }
 
-/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+/* 背景画像スライドショー  */
 .box .src1  {
   background-size: cover;
   background: url(image.jpeg) no-repeat center center;
@@ -174,7 +174,7 @@ textarea {
  100% { opacity: 0; }
 }
 
-/* --- 前面の文字定義 ----- */
+
 .box .boxString{
   position   : absolute;
   display    : inline-block;
@@ -245,9 +245,9 @@ p {
   letter-spacing: 11px;
   padding-top: 20px;
   font-weight: bold;
-  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
-  -webkit-background-clip: text;//テキストでくり抜く
-  -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   
 }
 
@@ -325,6 +325,7 @@ aside {
   }
 }
 
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -351,7 +352,9 @@ aside {
       text-decoration: none;
       color: blue;
     }
-  }
+  } 
+   
+  
   strong {
     display: block;
   }
@@ -518,7 +521,3 @@ span.picture {
   left: 60px;
 }
 
-#map {
-    height: 400px;
-    width: 1000px;
-}
