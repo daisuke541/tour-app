@@ -51,7 +51,7 @@ $gray-medium-light: #eaeaea;
 .titlelogogradation {
   background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-txt-fill-color: transparent;
   a:visited { color:#ACB6E5; text-decoration:none }
 }
 
@@ -70,12 +70,14 @@ body {
 }
 
 .btn {
-  background-color:rgba(0,0,0,0);
+  
   margin-right: 60px;
   font-weight: bold;
   border-radius: 5px;
   border-radius: 5px;
   border-radius: 5px;
+  position: relative;
+  top: 100px;
 }
 
 .fluid-box {
