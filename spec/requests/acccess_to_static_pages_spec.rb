@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 
-Rspec.describe 'Access to static_pages', type: :request do
+Rspec.describe 'static_pagesへのアクセス', type: :request do
   context 'GET #home' do
     before { get root_path }
     it 'responds successfully' do
