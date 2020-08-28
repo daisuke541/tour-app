@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   
-  get 'maps/index'
 
   get 'favorite_relationships/create'
 
   get 'favorite_relationships/destroy'
 
-  root   'static_pages#home'
+  root 'static_pages#home'
   
   post '/guest_log_in', to: 'sessions#new_guest'
 
@@ -41,6 +40,9 @@ Rails.application.routes.draw do
   
   resources :posts, only: [:show, :content, :title, :create, :destroy]
   
+  resources :comments
+
+
   resources :relationships, only: [:create, :destroy]
   
   resources :favorite_relationships, only: [:create, :destroy]
