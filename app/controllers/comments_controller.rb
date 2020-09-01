@@ -1,22 +1,21 @@
 class CommentsController < ApplicationController
 
 def create
-@post = Post.find(params[:post_id])
-@comment = @post.comments.build(comment_params)
-@comment.user = current_user
-if @comment.save
-  redirect_to post_path (@post)
-else
-render "posts/show"
+  @post = Post.find(params[:post_id])
+  @comment = @post.comment.build(comment_params)
+  @comment.user = current_user
+  if @comment.save
+    redirect_to post_path(@post)
+  else
+    render "posts/show"
+  end 
 end 
 
-
-end
 
 def destroy
   @comment = Comment.find_by(id: params[:id])
   @comment.destroy
-  redirect_to requests.referrer || root url
+  redirect_to request.referrer || root_url
 
 end 
 

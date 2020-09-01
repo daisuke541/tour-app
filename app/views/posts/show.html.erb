@@ -83,7 +83,7 @@ function codeAddress(){
 
 <div class="comment">
   <h2> コメント</h2>
-  <%= @posts.comments.each do |comment| %>
+  <%= @post.comments.each do |comment| %>
     <%= link_to gravatar_for(comment.user, size: 50), comment.user %>
     <p>
     <%= link_to "#{comment.user.name}", @user %>: <%= comment.body %>
@@ -96,7 +96,7 @@ function codeAddress(){
 </div>
 
 <div class ="comment-form">
-  <%= form_for([@posts, @comment]) do |f|
+  <%= form_for([@posts, @comment]) do |f| %>
   <%= render 'shared/error_messages' , object: f.object %>
   <div class="field">
   <%= f.text_area :body, placeholder: "コメントを投稿する" %>
@@ -116,6 +116,4 @@ function codeAddress(){
     });
   </script>
   </div>
-
-  <% end %>
 </div>
