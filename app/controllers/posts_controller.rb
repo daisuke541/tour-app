@@ -5,11 +5,12 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
-    # @latitude = @post.latitude
-    # @longitude = @post.longitude
+    @latitude = @post.latitude
+    @longitude = @post.longitude
     @address = @post.address
     @comment = Comment.new
     @user = User.find_by(id: @post.user_id)  
+    @comments = post.comments
   end 
   
   def create 
