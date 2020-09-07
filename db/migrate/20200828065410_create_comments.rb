@@ -1,8 +1,6 @@
 class CreateComments < ActiveRecord::Migration[5.1]
   def change
 
-    add_index :comments , [:user_id, :post_id, :created_at]
-
     create_table :comments do |t|
       t.references :user, foreign_key: true
       t.references :post, foreign_key: true
@@ -10,5 +8,6 @@ class CreateComments < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :comments , [:user_id, :post_id, :created_at]
   end
 end

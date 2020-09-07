@@ -8,6 +8,8 @@ class PostsController < ApplicationController
     # @latitude = @post.latitude
     # @longitude = @post.longitude
     @address = @post.address
+    @comment = Comment.new
+    @user = User.find_by(id: @post.user_id)  
   end 
   
   def create 
