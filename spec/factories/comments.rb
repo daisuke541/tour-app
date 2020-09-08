@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
     user { nil }
-    post { nil }
+    micropost { nil }
     body { "MyText" }
   end
 end
