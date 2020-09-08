@@ -81,34 +81,36 @@ function codeAddress(){
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLEMAP_API_KEY'] %>&callback=initMap" async defer></script>
 
-<div class="comment">
-  <h3> コメント</h3>
+<div class="comment_index">
+  <h3>コメント</h3>
   <% @post.comments.each do |comment| %>
-    <p><%= comment.user.name %></p>
-    <p><%= comment.body %></p>
-     <span class= "batu">
-      <%= link_to "削除" , [@post,comment] ,method: :delete if current_user?(comment.user) %>
-    </span></p>
-  <% end %>
-    
-</div>
+        <p><%= comment.user.name %></p>
+         <p><%= comment.body %></p>
+         
 
-<div class ="comment-form">
-  <%= form_for([@post, @comment]) do |f| %>
-  <%= render 'shared/error_messages' , object: f.object %>
-  <div class="field">
-  <%= f.text_area :body, placeholder: "コメントをしよう" %>
+    <p><span class= "batu"><%= link_to "削除" , [@post,comment] , method: :delete if current_user?(comment.user) %></span></p>
+
+    
+  <% end %>
   </div>
-  <%= f.submit "コメントを投稿する", class: "btn btn-info" %>
-     
+  
+  <div class="comment-form">
+      <%= form_for([@post , @comment]) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.text_area :body, placeholder: "コメントを書こう" %>
+    </div>
+    <%= f.submit "コメントを投稿する", class: "btn btn-info" %>
+    
     <% end %>
 
   <script type="text/javascript">
-    $('#micropost_picture').bind('change', function() {
+    $('#post_picture').bind('change', function() {
       var size_in_megabytes = this.files[0].size/500/500;
       if (size_in_megabytes > 5) {
-        alert("画像ファイルは最大５MBです。");
+        alert('Maximum file size is 5MB. Please choose a smaller file.');
       }
     });
   </script>
-  </div>
+  </div> 
+

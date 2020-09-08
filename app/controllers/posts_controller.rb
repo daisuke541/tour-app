@@ -10,7 +10,6 @@ class PostsController < ApplicationController
     @address = @post.address
     @comment = Comment.new
     @user = User.find_by(id: @post.user_id)  
-    @comments = post.comments
   end 
   
   def create 

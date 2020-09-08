@@ -38,10 +38,10 @@ Rails.application.routes.draw do
   
   resources :password_resets, only: [:new, :create, :edit, :update]
   
-  resources :posts, only: [:show, :content, :title, :create, :destroy]
+  resources :posts, only: [:show, :content, :title, :create, :destroy] do
   
   resources :comments
-
+  end 
 
   resources :relationships, only: [:create, :destroy]
   
