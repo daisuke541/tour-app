@@ -14,6 +14,12 @@
 </p>
 
 <p>
+<% @post.tags.each do |tag| %>
+    <%= tag.name %>
+    <% end %>
+</p>
+
+<p>
 <%= image_tag @post.picture.url if @post.picture? %>
 </p>
 

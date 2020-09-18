@@ -5,9 +5,10 @@
     <%= f.text_area :content, placeholder: "どんな場所ですか？" %>
     <%= f.text_area :address, placeholder:"住所、場所をいれてください" %>
 
-    <%= form_with model:@post, local: true do |f| %>
-    <%= f.text_field :tag_ids, class: "form_control", id:'tag_ids', placeholder:"タグをつけてください。複数つけるには','で区切ってください。" %>    
+     <%= form_with model:@post, local: true do |f| %>
+    <%= f.text_field :tag_ids, class: "form_control", id:'tag_ids', placeholder:"タグをつけてみましょう。区切るには','。" %>
   <% end %>
+
     <%= f.submit "投稿する", class: "button", onclick: "codeAddress()" %>
 
   </div>
