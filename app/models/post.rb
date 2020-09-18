@@ -10,10 +10,18 @@ class Post < ApplicationRecord
     
     has_many :favorite_relationships, dependent: :destroy
     has_many :liked_by, through: :favorite_relationships, source: :user
-    
-   geocoded_by :address
-   after_validation :geocode, if: :address_changed? 
-    
+    has_many :tag_relationships, dependent: :destroy
+    has_many :tag, through: :tag_relationships
+      
+    geocoded_by :address
+    after_validation :geocode, if: :address_changed? 
+   
+    def save_tags(savepost_tags)
+      savepost_tags.each do |new_name| 
+        post_tag = Tag.find_or_create_by(name: new_name)
+        self.tags << post_tag
+      end 
+    end 
 
     def self.search(search)
       if search

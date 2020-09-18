@@ -5,15 +5,17 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
-    # @latitude = @post.latitude
-    # @longitude = @post.longitude
+    @latitude = @post.latitude
+    @longitude = @post.longitude
     @address = @post.address
   end 
   
   def create 
     @post = current_user.posts.build(post_params)
+    tag_list = params[:post][:tag_ids].split(',')
     if @post.save
-      flash[:success] = "投稿しました"
+      @post.save_tags(tag_list)
+      flash[:success] = '投稿しました'
       redirect_to root_url
     else
       @feed_items = []
