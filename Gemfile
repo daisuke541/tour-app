@@ -58,6 +58,13 @@ end
 group :production do
 end
 
+group :development, :test do
+  gem 'byebug',  '9.0.6', platform: :mri
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+end
+
 group :production, :staging do
   gem 'unicorn', '5.4.1'
 end

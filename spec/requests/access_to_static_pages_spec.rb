@@ -10,8 +10,8 @@ Rspec.describe 'static_pagesへのアクセス', type: :request do
     end 
 
     it "has title '日本SECRET案内'" do
-      expect(response.body).to include full_title('')
-      expect(response.body).to_not include '日本SECRET案内'
+      expect(response.body).to include '日本SECRET案内'
+      expect(response.body).to_not include '| 日本SECRET案内'
     end 
   end
 
@@ -21,7 +21,7 @@ context 'GET #help' do
     expect(response).to have_http_status 200
   end 
 
-  it "has title 'Home | 日本SECRET案内'" do
+  it "has title 'Help'" do
     expect(response).to include full_title('Help')
   end 
 end 
@@ -31,7 +31,7 @@ context 'GET #about' do
   it 'responds successfully' do
     expect(response).to have_http_status 200
   end 
-  it "has title 'Home |  日本SECRET案内'" do
+  it "has title '日本SECRET案内について'" do
     expect(response).to include full_title('日本SECRET案内について')
   end 
 end
