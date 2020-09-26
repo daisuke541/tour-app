@@ -9,14 +9,17 @@
     <%= f.text_field :tag_ids, class: "form_control", id:'tag_ids', placeholder:"タグをつけてみましょう。区切るには','。" %>
   <% end %>
 
+
+<span class="picture">
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+
+</span>
+
     <%= f.submit "投稿する", class: "button", onclick: "codeAddress()" %>
 
   </div>
   
-<span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-    
-  </span>
+
 <% end %>
 
 <script type="text/javascript">

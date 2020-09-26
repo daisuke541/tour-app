@@ -4,8 +4,8 @@
     <p>
     <%= select_tag :tag_id, options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
     {
-    prompt: "タグで絞り込み",
-    class: "tagsearch",
-    onchange: "submit(this.form);"
+    prompt: 'タグで絞り込み',
+    class: 'tagsearch',
+    onchange: 'submit(this.form);'
     } %>
 <% end %>
